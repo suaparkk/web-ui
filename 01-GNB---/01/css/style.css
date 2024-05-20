@@ -43,21 +43,18 @@ header nav {
   display: block;
   padding: 10px 40px;
 }
-
 .gnb > li {
   position: relative;
 }
-
 .submenu {
   position: absolute;
-  top: 78px;
+  top: 4 px;
   left: 0;
   width: 100%;
 
   /* jQuery로 동작을 만들기 위한 준비 */
   display: none;
 }
-
 .submenu li a {
   display: block;
   border: 1px solid #ff0;
@@ -67,16 +64,16 @@ header nav {
   color: #fff;
 }
 
+/* 활성화된 메뉴 디자인 */
+.gnb > li.on {
+  background: skyblue;
+}
+
 .inner {
   width: 1200px;
   height: 100%;
   margin: 0 auto;
   background: rgba(255, 255, 0, 0.15);
-}
-
-/* 활성화된 메뉴 디자인 */
-.gnb > li.on {
-  background: skyblue;
 }
 
 main {
