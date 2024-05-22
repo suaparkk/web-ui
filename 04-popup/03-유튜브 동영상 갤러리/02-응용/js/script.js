@@ -51,7 +51,11 @@ $(function () {
     $videoWrap.addClass('active');
 
     // $video의 src 값을 없애자 --> 동영상 삭제
-    $video.attr('src', '');
+    // $video.attr('src', '');
+
+    setTimeout(function () {
+      $video.attr('src', '');
+    }, 300);
   });
 
   // 닫기버튼을 클릭했을 때
