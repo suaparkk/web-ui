@@ -9,9 +9,10 @@ $(function () {
   // 비디오 리스트를 클릭했을 때
   $selectVideo.on('click', function () {
     // 선택한 비디오 링크를 받아서 변수에 저장
-    const videoLink = $(this).data('link'); /* data-link */
+    let videoLink = $(this).data('link'); /* data-link */
     console.log(videoLink);
-
+    /* videoLink = videoLink + '?autoplay=1' */
+    videoLink += '?autoplay=1';
     // $video의 src 값으로 비디오 링크를 세팅
     $video.attr('src', videoLink);
 
@@ -24,6 +25,9 @@ $(function () {
     $dim.fadeIn();
     // videoWrap을 보이게
     $videoWrap.addClass('active');
+
+    // $video의 src 값을 없애자 --> 동영상 삭제
+    $video.attr('src', '');
   });
 
   // 닫기버튼을 클릭했을 때
